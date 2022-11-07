@@ -1,0 +1,127 @@
+.hw {
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+.hw__title {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.hw-timeline {
+    max-width: 901px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hw-timeline-item {
+    position: relative;
+    min-height: 145px;
+    width: 50%;
+    text-align: right;
+    padding-right: 36px;
+    padding-bottom: 60px;
+    @media(max-width: 899px) {
+        padding-right: 0;
+        padding-left: 36px;
+        text-align: left;
+    }
+}
+
+.hw-timeline-item__step-subtitle {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+
+    text-align: right;
+}
+
+.hw-timeline-item__step-time {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+
+    text-align: right;
+}
+
+.hw-timeline-item:nth-child(even) {
+    margin-left: auto;
+    text-align: left;
+    padding-left: 36px;
+    @media(max-width: 899px) {
+        margin-left: 0;
+    }
+}
+
+.hw-timeline-item:nth-child(even) .hw-timeline-item__step-subtitle {
+    text-align: left;
+} 
+
+.hw-timeline-item:nth-child(even) .hw-timeline-item__step-time {
+    text-align: left;
+}
+
+/*  Cercle  */
+
+.hw-timeline-item:before {
+    content: '';
+    width: 34px;
+    height: 34px;
+    background: #FFFFFF;
+    border: 4px solid #E1EEF4;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -17px;
+    @media(max-width: 899px) {
+        right: auto;
+        left: 0;
+    }
+}
+
+/*  перестраиваем cercle у четных влево  */
+
+.hw-timeline-item:nth-child(even):before{
+    right: auto;
+    left: -17px;
+    @media(max-width: 899px) {
+        left: 0;
+    }
+}
+
+/*  Poloska  */
+
+.hw-timeline-item:after {
+    content: '';
+    width: 4px;
+    position: absolute;
+    top: 34px;
+    right: -2px;
+    bottom: 0;
+    background: #E1EEF4;
+    border-radius: 4px;
+    @media(max-width: 899px) {
+        right: auto;
+        left: 15px;
+    }
+}
+
+/*  перестраиваем полоску у четных влево  */ 
+
+.hw-timeline-item:nth-child(even):after {
+    right: auto;
+    left: -2px;
+    @media(max-width: 899px) {
+        right: auto;
+        left: 15px;
+    }
+}
+
+.hw-timeline-item:last-child:after {
+    display: none;
+}
+
+.hw-timeline-item:last-child {
+    padding-bottom: 0;
+}

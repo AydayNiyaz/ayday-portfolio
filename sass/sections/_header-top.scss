@@ -1,0 +1,28 @@
+.header-top {
+    padding-top: 60px;
+}
+
+.header-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav-list {
+    display: flex;
+    column-gap: 100px;
+}
+
+.header-nav-list-item {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #000000;
+}
+
+.nav-icons-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 26px;
+    align-items: center;
+}
